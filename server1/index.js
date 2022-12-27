@@ -3,13 +3,28 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
 
+
 import Routes from './server/route.js';
 import Connection from './database/db.js';
+
+
+
+
 
 const app = express();
 
 
 dotenv.config();
+
+// app.use(express.static(path.join(__dirname, "./react assignment/build")));
+// app.get("*", function (_, res) {
+//   res.sendFile(
+//     path.join(__dirname, "./react assignment/build/index.html"),
+//     function (err) {
+//       res.status(500).send(err);
+//     }
+//   );
+// });
 
 // To handle HTTP POST requests in Express.js version 4 and above, 
 // you need to install the middleware module called body-parser.
